@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meow Coffee – Главная</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">
+    <img src="images/murzik.jpg" alt="На главную" class="logo">
+  </a>
+
+  <a href="index.html">Главная</a>
+  <a href="menu.html" class="active">Меню</a>
+  <a href="cats.html">Котики</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="about.html">О нас</a>
+  <a href="feedback.html">Обратная связь</a>
+  <a href="dom_js.html">Паспорт</a>
+  <a href="task.html">Задача</a>
+</nav>
+
+<div class="container my-4">
+  <h1>Наше меню</h1>
+  <p>Выберите любимый напиток в Meow Coffee:</p>
+  <div id="menu-list" class="row g-3 mt-3"></div>
+</div>
+
+<script>
+  const drinks = [
+    { name: 'Латте имбирный пряник', category: 'Фирменный напиток', price: 280, description: 'Нежный латте с сиропом имбирного пряника и взбитым молоком.', img: 'images/drink1.jpg' },
+    { name: 'Капучино', category: 'Классика', price: 230, description: 'Эспрессо с молоком и плотной бархатной пенкой.', img: 'images/drink2.jpg' },
+    { name: 'Американо', category: 'Классика', price: 180, description: 'Чёрный кофе для тех, кто любит чистый вкус эспрессо.', img: 'images/drink3.jpg' },
+    { name: 'Раф лавандовый', category: 'Фирменный напиток', price: 320, description: 'Сливочный раф с ароматом лаванды и ванили.', img: 'images/drink4.jpg' },
+    { name: 'Горячий шоколад с зефиром', category: 'Без кофеина', price: 260, description: 'Густой шоколад с мягким зефиром для тёплых вечеров.', img: 'images/drink5.jpg' },
+    { name: 'Матча латте', category: 'Чай', price: 300, description: 'Японский зелёный чай матча с молоком.', img: 'images/drink6.jpg' }
+  ];
+
+  const menuList = document.getElementById('menu-list');
+
+  drinks.forEach(drink => {
+    const col = document.createElement('div');
+    col.className = 'col-12 col-sm-6 col-lg-4';
+
+    col.innerHTML = `
+      <div class="card h-100 shadow-sm">
+        <img src="${drink.img}" class="card-img-top" alt="${drink.name}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title mb-1">${drink.name}</h5>
+          <p class="card-subtitle text-muted mb-2">${drink.category}</p>
+          <p class="card-text flex-grow-1">${drink.description}</p>
+          <p class="mt-2 fw-bold">${drink.price} ₽</p>
+        </div>
+      </div>
+    `;
+
+    menuList.appendChild(col);
+  });
+</script>
+
+</body>
+</html>
