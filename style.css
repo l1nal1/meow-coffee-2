@@ -1,3 +1,5 @@
+
+
 nav {
     background-color: #fff0f5;
     padding: 10px;
@@ -27,6 +29,8 @@ nav a:hover {
     color: #ff0000; 
 }
 
+
+
 .internal-nav {
     background-color: white;
     padding: 10px;
@@ -38,6 +42,8 @@ nav a:hover {
     margin-top: 10px;
 }
 
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -48,10 +54,13 @@ h1, h2, h3, h4 {
     color: #ffb6c1; 
 }
 
+
 .card-img-top {
-  height: 200px;
-  object-fit: cover;
+    height: 200px;
+    object-fit: cover;
 }
+
+
 
 img {
     max-width: 100%;
@@ -64,3 +73,103 @@ img {
     border-radius: 50%;
 }
 
+
+.domjs-bg {
+    background: #fce8f0;
+    padding: 20px;
+}
+
+
+.stage {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.stage .bg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+}
+
+
+#pas {
+    position: absolute;
+    inset: 0;
+    font-size: 28px;
+    color: #222;
+    line-height: 1.1;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+}
+
+#pas p {
+    margin: 0;
+    position: absolute;
+}
+
+
+#pas .p4 { left: 450px; top: 950px; }
+#pas .p5 { left: 450px; top: 1070px; }
+#pas .p6 { left: 450px; top: 1150px; }
+#pas .p7 { left: 450px; top: 1230px; }
+
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+
+.result {
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-left: 4px solid #ff69b4;
+}
+
+/* Скриншот */
+.screenshot-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.screenshot {
+    max-width: 800px;
+    width: 100%;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+}
+
+
+
+@media (max-width: 576px) {
+    #pas {
+        font-size: 16px;
+    }
+
+    #pas .p4 { left: 55%; top: 56%; }
+    #pas .p5 { left: 55%; top: 63%; }
+    #pas .p6 { left: 55%; top: 69%; }
+    #pas .p7 { left: 55%; top: 76%; }
+}
